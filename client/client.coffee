@@ -1,5 +1,5 @@
 Meteor.startup ->
-  Session.set 'new_cussword', 
+  Session.set 'new_cussword', ''
 
 Template.navigation.project_title = ->
   'Meteor workshop'
@@ -16,15 +16,17 @@ Template.content.total_cusswords_message = ->
   else
     if count == 1 then 'My favourite cussword' else 'My favourite cusswords'
 
+window.word_exists = (word) ->
+  Swearwords.findOne(word: word)?
+
 add_event = ->
   new_word = Session.get 'new_cussword'
-  unless new_word.length == 0 
+  unless new_word.length == 0 or word_exists(new_word)
     Swearwords.insert
       word: new_word
       up_votes: 0
       down_votes: 0
     Session.set 'new_cussword', ''
-    $('#new_cussword').val('')
 
 Template.content.events
   "click .remove": ->
@@ -40,7 +42,6 @@ Template.content.events
 
   'keyup input[name=word]': (event) ->
     Session.set 'new_cussword', $('#new_cussword').val();
-    console.log event
     if event.keyCode == 13
       add_event()
 
