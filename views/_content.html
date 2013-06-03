@@ -1,0 +1,31 @@
+<template name="content">
+  <h3>{{total_cusswords_message}}</h3>
+
+  <div class="new_cussword_fields">
+    <input id="new_cussword" name="word" value="{{new_cussword}}">
+    <input type="submit" value="new cussword" class="btn btn-primary">
+  </div>
+
+  <div class="row">
+    <div class="span6">
+    <ul class='cusswords-list'>
+    {{#each cusswords}}
+      <li class='well'>
+        <span class='word'>{{word}}</span>
+        <div class="controls pull-right">
+          <span class="badge badge-info upvote">{{up_votes}}
+          <i class="icon-arrow-up icon-white"></i></span>
+
+          <span class="badge badge-warning downvote">{{down_votes}}
+          <i class="icon-arrow-down icon-white"></i>
+          </span>
+          <span>
+            <i class="icon-trash remove"></i>
+          </span>
+        </div>
+      </li>
+    {{/each}}
+    </ul>
+    </div>
+  </div>
+</template>

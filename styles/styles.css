@@ -1,0 +1,39 @@
+@media (min-width: 980px) {
+  body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+}
+
+ul.cusswords-list {
+  list-style-type: none;
+}
+
+ul.cusswords-list {
+  margin-left: 0px;
+}
+
+.word {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.new_cussword_fields {
+  margin-bottom: 15px;
+}
+
+#new_cussword {
+  width: 240px;
+}
+
+.cusswords-list .badge-info:hover {
+  background-color: rgb(45, 178, 253);
+}
+
+.cusswords-list .badge-warning:hover {
+  background-color: rgb(228, 84, 84);
+}
+
+.badge {
+  transition: background-color 200ms;
+}

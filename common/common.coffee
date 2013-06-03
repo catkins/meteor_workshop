@@ -1,0 +1,1 @@
+@Swearwords = new Meteor.Collection('swearwords')
