@@ -19,3 +19,8 @@ Some other handy resources
 - [NodeJS](http://nodejs.org/)
 - [Coffeescript](http://coffeescript.org/)
 - [Underscore.js](http://underscorejs.org/)
+
+There's bunch of addons
+-----------------------
+
+Check out [Atmosphere](https://atmosphere.meteor.com/).
