@@ -8,3 +8,5 @@ Install it
     $ curl https://install.meteor.com | /bin/sh
   
 [Read the docs](http://docs.meteor.com/)
+
+Find out [more](http://bit.ly/11oojZR)!
